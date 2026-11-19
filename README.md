@@ -37,6 +37,17 @@ java Driver
 
 Screenshot: [shapes output](<Bujur Sangkar assignment/images/Screenshot.png>)
 
+### Abstract and Interface
+
+Demonstrates an abstract class and an interface with a simple `Mobil` example.
+
+Run from the `Abstract and Interface` folder:
+
+```sh
+javac Main.java
+java Main
+```
+
 ### Exercise
 
 Contains two standalone console exercises:
