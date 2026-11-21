@@ -1,33 +1,35 @@
 
-abstract class Kendaraan {
+abstract class Entitas {
     abstract void bergerak();
-
-    void nyalakanMesin() {
-        System.out.println("Mesin kendaraan dinyalakan.");
-    }
+    abstract void bernafas();
 }
 
-interface BisaBerhenti {
-    void berhenti();
+interface Kerja {
+    void masaknasi();
 }
 
-class Mobil extends Kendaraan implements BisaBerhenti {
+class Manusia extends Entitas implements Kerja {
     @Override
     void bergerak() {
-        System.out.println("Mobil sedang berjalan.");
+        System.out.println("Lagi jalan....");
+    }
+
+    @Override 
+    void bernafas(){
+        System.out.println("Haaaah.....");
     }
 
     @Override
-    public void berhenti() {
-        System.out.println("Mobil berhenti.");
+    public void masaknasi() {
+        System.out.println("Nasi udah masak wak.....");
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Mobil mobil = new Mobil();
-        mobil.nyalakanMesin();
-        mobil.bergerak();
-        mobil.berhenti();
+        Manusia satria = new Manusia();
+        satria.bernafas();
+        satria.bergerak();
+        satria.masaknasi();
     }
 }
